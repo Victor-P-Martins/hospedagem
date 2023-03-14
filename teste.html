@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>EstateAgency Bootstrap Template - Index</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <img src="https://picsum.photos/id/10/200/300" class="img-thumbnail" alt="Imagem 1">
+      </div>
+      <div class="col-md-4">
+        <img src="https://picsum.photos/id/20/200/300" class="img-thumbnail" alt="Imagem 2">
+      </div>
+      <div class="col-md-4">
+        <img src="https://picsum.photos/id/30/200/300" class="img-thumbnail" alt="Imagem 3">
+      </div>
+    </div>
+  </div>
+  
+  <!-- Modal -->
+  <div class="modal">
+    <div class="modal-content">
+      <img src="" class="modal-img">
+      <button type="button" class="modal-close">&times;</button>
+      <button type="button" class="modal-prev">&#10094;</button>
+      <button type="button" class="modal-next">&#10095;</button>
+    </div>
+  </div>
+</body>
+</html>
+
+<style>
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+  display: block;
+  position: relative;
+  margin: auto;
+  width: 80%;
+  max-width: 800px;
+  max-height: 80%;
+  box-sizing: border-box;
+  padding: 20px;
+  text-align: center;
+}
+
+.modal-img {
+  max-width: 100%;
+  max-height: 100%;
+  margin-bottom: 20px;
+}
+
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 28px;
+  font-weight: bold;
+  color: white;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.modal-prev,
+.modal-next {
+  position: absolute;
+  top: 50%;
+  font-size: 50px;
+  font-weight: bold;
+  color: white;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.modal-prev {
+  left: 10px;
+}
+
+.modal-next {
+  right: 10px;
+}
+
+.modal-prev:hover,
+.modal-next:hover {
+  color: #f2f2f2;
+}
+
+@media screen and (max-width: 600px) {
+  .modal-content {
+    width: 90%;
+    max-width: none;
+  }
+}
+</style>
+
+<script>
+var modal = document.querySelector('.modal');
+var modalImg = document.querySelector('.modal-img');
+var modalClose = document.querySelector('.modal-close');
+var modalPrev = document.querySelector('.modal-prev');
+var modalNext = document.querySelector('.modal-next');
+var thumbs = document.querySelectorAll('.img-thumbnail');
+
+var currentIndex = 0;
+
+// Abre a imagem no modal quando a imagem for clicada
+thumbs.forEach(function(thumb, index) {
+  thumb.addEventListener('click', function() {
+    currentIndex = index;
+    var imgSrc = this.src;
+    modalImg.src = imgSrc;
+    modal.style.display = 'block';
+  });
+});
+</script>

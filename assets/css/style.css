@@ -1,4 +1,4 @@
-/**
+/**Fotos
 * Template Name: EstateAgency - v4.10.0
 * Template URL: https://bootstrapmade.com/real-estate-agency-bootstrap-template/
 * Author: BootstrapMade.com
@@ -20,6 +20,22 @@ h4,
 h5,
 h6 {
   color: #000000;
+}
+.ampliada {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ampliada img {
+  max-width: 80%;
+  max-height: 80%;
 }
 
 a {
